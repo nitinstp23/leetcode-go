@@ -8,4 +8,5 @@ import (
 
 func main() {
 	fmt.Println(sliding_window.FindMaxAverage([]int{1, 12, -5, -6, 50, 3}, 4))
+	fmt.Println(sliding_window.LengthOfLongestSubstring("abcabcbb"))
 }
