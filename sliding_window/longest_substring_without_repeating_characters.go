@@ -27,12 +27,14 @@ func LengthOfLongestSubstring(s string) int {
 
 	for j < len(s) {
 		if charIndex, found := charMap[s[j]]; found {
-			i = charIndex + 1
+			if i < (charIndex + 1) {
+				i = charIndex + 1
+			}
 		}
 		charMap[s[j]] = j
 
-		if (j - i) > result {
-			result = j - i
+		if (j - i + 1) > result {
+			result = j - i + 1
 		}
 
 		j += 1
